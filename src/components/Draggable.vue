@@ -23,10 +23,6 @@ export default {
       isMouseDown: false,
       top: 0,
       left: 0,
-      mouseX: 0,
-      mouseY: 0,
-      elementTop: 0,
-      elementLeft: 0,
       differenceY: 0,
       differenceX: 0
     }
@@ -35,12 +31,12 @@ export default {
     mouseDown (e) {
       const element = document.getElementById('movable')
       this.isMouseDown = true
-      this.mouseY = e.clientY
-      this.mouseX = e.clientX
-      this.elementTop = element.offsetTop
-      this.elementLeft = element.offsetLeft
-      this.differenceY = this.mouseY - this.elementTop
-      this.differenceX = this.mouseX - this.elementLeft
+      const mouseY = e.clientY
+      const mouseX = e.clientX
+      const elementTop = element.offsetTop
+      const elementLeft = element.offsetLeft
+      this.differenceY = mouseY - elementTop
+      this.differenceX = mouseX - elementLeft
     },
     mouseUp () {
       const dropped = document.getElementById('movable')
@@ -74,8 +70,8 @@ export default {
     },
     mouseMove (e) {
       if (!this.isMouseDown) return
-      let newMouseX = e.clientX
-      let newMouseY = e.clientY
+      const newMouseX = e.clientX
+      const newMouseY = e.clientY
       const newElmTop = newMouseY - this.differenceY
       const newElmLeft = newMouseX - this.differenceX
       this.top = newElmTop
