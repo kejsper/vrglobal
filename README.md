@@ -41,5 +41,4 @@ SCSS with sass-loader
 FontAwesome - imported in index.html file from cdn.
 
 ## How to use the app
-
 This app contains all the tasks that I was suppose to do. Please use dropdown menu as a navigation between tasks. Enjoy!
