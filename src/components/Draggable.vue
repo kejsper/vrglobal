@@ -45,16 +45,14 @@ export default {
     mouseUp () {
       const dropped = document.getElementById('movable')
       const dropZone = document.getElementById('droppable')
+      // getting sizes and positions for dragged div and drop div
       const dropZonePositionY = dropZone.offsetTop
       const dropZoneSizeY = dropZone.offsetHeight
       const dropZonePositionX = dropZone.offsetLeft
       const dropZoneSizeX = dropZone.offsetWidth
       const droppedSizeX = dropped.offsetWidth
       const droppedSizeY = dropped.offsetHeight
-      console.log('pozycja', dropZonePositionX, dropZonePositionY)
-      console.log(dropZoneSizeX, dropZoneSizeY)
-      console.log(this.left, this.top)
-      console.log('dropowany div', droppedSizeX, droppedSizeY)
+      // when dragged div is not in the drop div area goes back to 0,0 position
       if (droppedSizeX + this.left < dropZonePositionX) {
         this.left = 0
         this.top = 0
@@ -68,7 +66,7 @@ export default {
         this.left = 0
         this.top = 0
       } else {
-        console.log('tutak')
+        // when we hit dragging div to drop area we set position of dragged div to the center of drop area
         this.left = dropZonePositionX + ((dropZoneSizeX - droppedSizeX) / 2)
         this.top = dropZonePositionY + ((dropZoneSizeY - droppedSizeY) / 2)
       }

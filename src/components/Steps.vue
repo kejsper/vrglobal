@@ -79,12 +79,13 @@ export default {
   }
   &__item {
     display: flex;
-    flex-direction: column;
     margin: 20px 5px;
+    height: 60px;
   }
 }
 .icon {
   display: flex;
+  align-self: center;
   align-items: center;
   justify-content: center;
   width: 60px;
