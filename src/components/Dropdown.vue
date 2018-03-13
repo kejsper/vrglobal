@@ -87,11 +87,10 @@ export default {
     list-style-type: none;
     padding: 0 15px;
     text-align: left;
-    box-shadow: 2px 3px 20px -4px rgba(0,0,0,0.3);
+    box-shadow: 2px 3px 20px -4px $color-black-shadowed;
     &:after, &:before {
       content: '';
       position: absolute;
-      bottom: 100%;
       border: 15px solid transparent;
       width: 0;
       height: 0;
@@ -99,7 +98,6 @@ export default {
     &:before {
       border-bottom-color: $color-white;
       border-width: 15px;
-      position: absolute;
       top: -29px;
       left: 95px;
       z-index: 2;
@@ -107,7 +105,6 @@ export default {
     &:after {
       border-bottom-color: $color-french-gray;
       border-width: 15px;
-      position: absolute;
       top: -31px;
       left: 95px;
       z-index: 1;
@@ -123,14 +120,5 @@ export default {
     }
   }
 
-}
-
-.icon {
-  &__dropdown {
-    &::before {
-      content: "\f0d7";
-      font-family: FontAwesome;
-    }
-  }
 }
 </style>

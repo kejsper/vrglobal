@@ -1,0 +1,20 @@
+.icon {
+  &__dropdown {
+    &::before {
+      content: "\f0d7";
+      font-family: FontAwesome;
+    }
+  }
+  &__active {
+    &:before {
+      content: '\f105';
+      font-family: FontAwesome;
+    }
+  }
+  &__last {
+    &:before {
+      content: '\f00c';
+      font-family: FontAwesome;
+    }
+  }
+}

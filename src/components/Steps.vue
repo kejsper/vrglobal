@@ -101,24 +101,11 @@ export default {
     outline: none;
     border: none;
   }
-
   &__inactive {
     width: 20px;
     height: 20px;
     background-color: $color-mischka;
     border-radius: 50%;
-  }
-  &__active {
-    &:before {
-      content: '\f105';
-      font-family: FontAwesome;
-    }
-  }
-  &__last {
-    &:before {
-      content: '\f00c';
-      font-family: FontAwesome;
-    }
   }
 }
 </style>
