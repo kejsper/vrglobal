@@ -5,7 +5,9 @@
       <li v-for="(step, key) in steps"
           :key="key"
           class="steps__item">
-          <button @click="setClasses(key)" class="icon" :class="{ 'icon__active': step.active, 'icon__inactive': (!step.active && !step.lastActive), 'icon__last': step.lastActive }"></button>
+          <button @click="setClasses(key)"
+                  class="icon" :class="{ 'icon__active': step.active, 'icon__inactive': (!step.active && !step.lastActive), 'icon__last': step.lastActive }">
+          </button>
       </li>
     </ul>
   </section>
@@ -69,24 +71,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import './../assets/utils/_variables.scss';
+@import './../assets/utils/_mixins.scss';
+
 .steps {
   margin-top: 200px;
   &__list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    @include flex(row, center, center);
     list-style-type: none;
   }
   &__item {
     display: flex;
-    flex-direction: column;
     margin: 20px 5px;
+    height: 60px;
   }
 }
 .icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex(row, center, center);
+  align-self: center;
   width: 60px;
   height: 60px;
   background-color: #84e384;
@@ -99,24 +101,11 @@ export default {
     outline: none;
     border: none;
   }
-
   &__inactive {
     width: 20px;
     height: 20px;
-    background-color: #DEDCE5;
+    background-color: $color-mischka;
     border-radius: 50%;
-  }
-  &__active {
-    &:before {
-      content: '\f105';
-      font-family: FontAwesome;
-    }
-  }
-  &__last {
-    &:before {
-      content: '\f00c';
-      font-family: FontAwesome;
-    }
   }
 }
 </style>

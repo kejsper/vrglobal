@@ -1,0 +1,13 @@
+// main scss file - used in app.vue file
+
+// utils
+@import 'utils/animations';
+@import 'utils/mixins';
+@import 'utils/variables';
+
+// layout
+@import 'layout/icons';
+@import 'layout/forms';
+
+// pages
+@import 'pages/home';
