@@ -19,6 +19,6 @@ export default {
 
 <style lang="scss" scoped>
 .welcome {
-  margin-top: 200px;
+  margin-top: 150px;
 }
 </style>

@@ -49,13 +49,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import './../assets/utils/_variables.scss';
+@import './../assets/utils/_mixins.scss';
+
 .dropdown {
+  @include flex(row, center, center);
   position: relative;
-  display: flex;
-  flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
 
   &__title {
     margin: 0;
@@ -65,9 +65,9 @@ export default {
     margin: 0 10px;
     width: 25px;
     height: 25px;
-    background-color: #D6D5E1;
+    background-color: $color-mischka;
     border: none;
-    color: #443E6B;
+    color: $color-mulled-wine;
     border-radius: 50%;
     cursor: pointer;
     &:focus {
@@ -81,8 +81,8 @@ export default {
     top: calc(100% + 12px);
     left: -10px;
     min-width: 200px;
-    background-color: white;
-    border: 1px solid #C6C7CE;
+    background-color: $color-white;
+    border: 1px solid $color-french-gray;
     border-radius: 5px;
     list-style-type: none;
     padding: 0 15px;
@@ -97,7 +97,7 @@ export default {
       height: 0;
     }
     &:before {
-      border-bottom-color: #fff;
+      border-bottom-color: $color-white;
       border-width: 15px;
       position: absolute;
       top: -29px;
@@ -105,7 +105,7 @@ export default {
       z-index: 2;
     }
     &:after {
-      border-bottom-color: #C6C7CE;
+      border-bottom-color: $color-french-gray;
       border-width: 15px;
       position: absolute;
       top: -31px;
@@ -117,7 +117,7 @@ export default {
     display: list-item;
     min-width: 200px;
     padding: 20px 0;
-    border-bottom: 1px solid #E9E8EE;
+    border-bottom: 1px solid $color-athens-gray;
     &:last-of-type {
       border-bottom: none;
     }

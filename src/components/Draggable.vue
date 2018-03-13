@@ -85,8 +85,10 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+@import './../assets/utils/_variables.scss';
+@import './../assets/utils/_mixins.scss';
+
 .draggable {
   width: 100%;
   margin-top: 200px;
@@ -102,7 +104,7 @@ export default {
     z-index: 1;
     width: 150px;
     height: 150px;
-    background-color: grey;
+    background-color: $color-gray;
     cursor: pointer
   }
 
@@ -112,8 +114,8 @@ export default {
     right: 0;
     width: 250px;
     height: 250px;
-    background-color: #fff;
-    border: 1px solid #000;
+    background-color: $color-white;
+    border: 1px solid $color-black;
   }
 }
 </style>

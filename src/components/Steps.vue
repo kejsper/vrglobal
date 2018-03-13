@@ -72,12 +72,12 @@ export default {
 
 <style lang="scss" scoped>
 @import './../assets/utils/_variables.scss';
+@import './../assets/utils/_mixins.scss';
+
 .steps {
   margin-top: 200px;
   &__list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    @include flex(row, center, center);
     list-style-type: none;
   }
   &__item {
@@ -87,10 +87,8 @@ export default {
   }
 }
 .icon {
-  display: flex;
+  @include flex(row, center, center);
   align-self: center;
-  align-items: center;
-  justify-content: center;
   width: 60px;
   height: 60px;
   background-color: #84e384;
