@@ -5,20 +5,20 @@
       <transition name="fade">
         <ul class="dropdown__list" v-if="showDropdown">
           <li class="dropdown__item">
-            <input type="radio" class="dropdown__radio" id="welcome" v-model="chooseAction" value="welcome" @change="handleChange()">
-            <label class="dropdown__label" for="welcome">
+            <input type="radio" class="form__radio" id="welcome" v-model="chooseAction" value="welcome" @change="handleChange()">
+            <label class="form__label" for="welcome">
               Welcome message
             </label>
           </li>
           <li class="dropdown__item">
-            <input type="radio" class="dropdown__radio" id="steps" v-model="chooseAction" value="steps" @change="handleChange()">
-            <label class="dropdown__label" for="steps">
+            <input type="radio" class="form__radio" id="steps" v-model="chooseAction" value="steps" @change="handleChange()">
+            <label class="form__label" for="steps">
               Steps
             </label>
           </li>
           <li class="dropdown__item">
-            <input type="radio" class="dropdown__radio" id="draggable" v-model="chooseAction" value="draggable" @change="handleChange()">
-            <label class="dropdown__label" for="draggable">
+            <input type="radio" class="form__radio" id="draggable" v-model="chooseAction" value="draggable" @change="handleChange()">
+            <label class="form__label" for="draggable">
               Draggable
             </label>
           </li>
@@ -122,61 +122,7 @@ export default {
       border-bottom: none;
     }
   }
-  &__label {
-    font-weight: 600;
-  }
-  &__radio {
-    position: absolute;
-    left: -7777px;
-    &:checked + .dropdown__label, &:not(:checked) + .dropdown__label {
-      position: relative;
-      padding-left: 28px;
-      cursor: pointer;
-      line-height: 20px;
-      display: inline-block;
-      color: #666;
-    }
-    &:not(:checked) + .dropdown__label:before {
-      content: '';
-      position: absolute;
-      left: 4px;
-      top: 4px;
-      width: 12px;
-      height: 12px;
-      border-radius: 100%;
-      background: #DEDCE5;
-    }
-    &:checked + .dropdown__label:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 16px;
-      height: 16px;
-      border: 2px solid #32C7F2;
-      border-radius: 100%;
-      background: transparent;
-    }
-    &:checked + .dropdown__label:after, &:not(:checked) + .dropdown__label:after {
-      content: '';
-      width: 12px;
-      height: 12px;
-      background: #32C7F2;
-      position: absolute;
-      top: 4px;
-      left: 4px;
-      border-radius: 100%;
-      transition: all 0.1s ease;
-    }
-    &:not(:checked) + .dropdown__label:after {
-      opacity: 0;
-      transform: scale(0);
-    }
-    &:checked + .dropdown__label:after {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
+
 }
 
 .icon {

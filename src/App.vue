@@ -38,24 +38,5 @@ export default {
 </script>
 
 <style lang="scss">
-h1, h2, h3, h4 {
-  font-weight: normal;
-}
-#app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-// vue animations
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
-}
-.fade-enter, .fade-leave-to {
-  opacity: 0;
-}
+@import './assets/main.scss';
 </style>

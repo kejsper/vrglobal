@@ -5,7 +5,9 @@
       <li v-for="(step, key) in steps"
           :key="key"
           class="steps__item">
-          <button @click="setClasses(key)" class="icon" :class="{ 'icon__active': step.active, 'icon__inactive': (!step.active && !step.lastActive), 'icon__last': step.lastActive }"></button>
+          <button @click="setClasses(key)"
+                  class="icon" :class="{ 'icon__active': step.active, 'icon__inactive': (!step.active && !step.lastActive), 'icon__last': step.lastActive }">
+          </button>
       </li>
     </ul>
   </section>
@@ -69,6 +71,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import './../assets/utils/_variables.scss';
 .steps {
   margin-top: 200px;
   &__list {
@@ -104,7 +107,7 @@ export default {
   &__inactive {
     width: 20px;
     height: 20px;
-    background-color: #DEDCE5;
+    background-color: $color-mischka;
     border-radius: 50%;
   }
   &__active {
