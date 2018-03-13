@@ -3,6 +3,12 @@
 > Recruitment tasks for VR Global.
 > Coded by Kacper Tylenda using Vue.js
 
+## How to use the app
+This app contains all the tasks that I was suppose to do. Please use dropdown menu as a navigation between tasks. Enjoy!
+
+## Check results
+Check out demo: [link](http://vrglobal.tylendaweb.com/)
+
 ## Build Setup
 
 ``` bash
@@ -39,6 +45,3 @@ SCSS with sass-loader
 
 ## Outside libraries
 FontAwesome - imported in index.html file from cdn.
-
-## How to use the app
-This app contains all the tasks that I was suppose to do. Please use dropdown menu as a navigation between tasks. Enjoy!
